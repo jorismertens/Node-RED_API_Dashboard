@@ -1,0 +1,494 @@
+[
+    {
+        "id": "269b39a3.096916",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2757096c.40ead6",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#1b69c6",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#1b69c6",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#1b69c6",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#4790e6",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#1b69c6",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "e8d12391.222638",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Our Weather Company",
+        "icon": "",
+        "disabled": false,
+        "hidden": false,
+        "info": "<style>\n    \n        background-image: url(\"https://seeklogo.com/images/P/partly-sunny-weather-symbo-logo-FE1CF4CAE5-seeklogo.com.gif\");\n        background-repeat: no-repeat;margin-left: 60px;\n        margin-left: 0;\n        background-size: 125px 39px;\n        background-position: 50px;\n        \n</style>"
+    },
+    {
+        "id": "f1a1db08.23bb68",
+        "type": "ui_group",
+        "z": "",
+        "name": "Cities",
+        "tab": "e8d12391.222638",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c6b75353.f07dc8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Weather",
+        "tab": "e8d12391.222638",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "acc286e1.2f64f",
+        "type": "ui_group",
+        "z": "",
+        "name": "Picture",
+        "tab": "e8d12391.222638",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ee7d07fe.3889",
+        "type": "ui_group",
+        "z": "",
+        "name": "Thermometer",
+        "tab": "e8d12391.222638",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "64ca9f2f.9797d8",
+        "type": "openweathermap",
+        "z": "269b39a3.096916",
+        "name": "",
+        "wtype": "current",
+        "lon": "",
+        "lat": "",
+        "city": "London",
+        "country": "UK",
+        "language": "en",
+        "x": 530,
+        "y": 280,
+        "wires": [
+            [
+                "4ad0131e.8814a4"
+            ]
+        ]
+    },
+    {
+        "id": "4ad0131e.8814a4",
+        "type": "ui_template",
+        "z": "269b39a3.096916",
+        "group": "c6b75353.f07dc8",
+        "name": "",
+        "order": 2,
+        "width": 6,
+        "height": 4,
+        "format": "<div ng-bind-html=\"msg.payload.description\"></div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 860,
+        "y": 340,
+        "wires": [
+            [
+                "73541404.ca283c"
+            ]
+        ]
+    },
+    {
+        "id": "4f0fb20d.a5996c",
+        "type": "ui_button",
+        "z": "269b39a3.096916",
+        "name": "",
+        "group": "f1a1db08.23bb68",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "London",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 300,
+        "y": 280,
+        "wires": [
+            [
+                "64ca9f2f.9797d8"
+            ]
+        ]
+    },
+    {
+        "id": "fc64389b.271858",
+        "type": "ui_button",
+        "z": "269b39a3.096916",
+        "name": "",
+        "group": "f1a1db08.23bb68",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Amsterdam",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 310,
+        "y": 320,
+        "wires": [
+            [
+                "3da65d9e.644b02"
+            ]
+        ]
+    },
+    {
+        "id": "87b26adc.672d48",
+        "type": "ui_button",
+        "z": "269b39a3.096916",
+        "name": "",
+        "group": "f1a1db08.23bb68",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "New York",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 300,
+        "y": 360,
+        "wires": [
+            [
+                "444cc596.22899c"
+            ]
+        ]
+    },
+    {
+        "id": "3da65d9e.644b02",
+        "type": "openweathermap",
+        "z": "269b39a3.096916",
+        "name": "",
+        "wtype": "current",
+        "lon": "",
+        "lat": "",
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "language": "en",
+        "x": 530,
+        "y": 320,
+        "wires": [
+            [
+                "4ad0131e.8814a4"
+            ]
+        ]
+    },
+    {
+        "id": "444cc596.22899c",
+        "type": "openweathermap",
+        "z": "269b39a3.096916",
+        "name": "",
+        "wtype": "current",
+        "lon": "",
+        "lat": "",
+        "city": "New York",
+        "country": "United States",
+        "language": "en",
+        "x": 530,
+        "y": 360,
+        "wires": [
+            [
+                "4ad0131e.8814a4"
+            ]
+        ]
+    },
+    {
+        "id": "49ecede4.436b2c",
+        "type": "comment",
+        "z": "269b39a3.096916",
+        "name": "buttons for every city",
+        "info": "",
+        "x": 260,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "af64fd62.451258",
+        "type": "comment",
+        "z": "269b39a3.096916",
+        "name": "API connection to weathermap",
+        "info": "",
+        "x": 570,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ede3347c.677928",
+        "type": "comment",
+        "z": "269b39a3.096916",
+        "name": "Output on Dashboard",
+        "info": "",
+        "x": 880,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "b40b05f3.e72648",
+        "type": "ui_button",
+        "z": "269b39a3.096916",
+        "name": "",
+        "group": "f1a1db08.23bb68",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Tokyo",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 290,
+        "y": 400,
+        "wires": [
+            [
+                "53d565b2.718a0c"
+            ]
+        ]
+    },
+    {
+        "id": "53d565b2.718a0c",
+        "type": "openweathermap",
+        "z": "269b39a3.096916",
+        "name": "",
+        "wtype": "current",
+        "lon": "",
+        "lat": "",
+        "city": "Tokyo",
+        "country": "Japan",
+        "language": "en",
+        "x": 530,
+        "y": 400,
+        "wires": [
+            [
+                "4ad0131e.8814a4"
+            ]
+        ]
+    },
+    {
+        "id": "1187b0b1.473427",
+        "type": "ui_template",
+        "z": "269b39a3.096916",
+        "group": "acc286e1.2f64f",
+        "name": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "\n\n<style>\n<!this is the part where the logo is being set. You can use any URL pointing to a logo>\n.md-toolbar-tools{\n        background-image: url(\"https://seeklogo.com/images/P/partly-sunny-weather-symbo-logo-FE1CF4CAE5-seeklogo.com.gif\");\n        background-repeat: no-repeat;margin-left: 60px;\n        margin-left: 0;\n        background-size: 39px 39px;\n        background-position: 50px;\n        \n    }\n    .md-toolbar-tools h1{\n        text-align: right;\n        width: 250px;\n    }\n    body {\n        background-image: url(\"https://wallpaperaccess.com/full/896979.jpg\");\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "x": 220,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "75cce778.71f11",
+        "type": "comment",
+        "z": "269b39a3.096916",
+        "name": "Logo & background image",
+        "info": "",
+        "x": 270,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "6597cc1f.c671c4",
+        "type": "ui_gauge",
+        "z": "269b39a3.096916",
+        "name": "",
+        "group": "ee7d07fe.3889",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature (C)",
+        "label": "Degrees",
+        "format": "{{value}}",
+        "min": "-10",
+        "max": "50",
+        "colors": [
+            "#1ca0b2",
+            "#33bb0f",
+            "#ca3838"
+        ],
+        "seg1": "10",
+        "seg2": "30",
+        "x": 1400,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "73541404.ca283c",
+        "type": "change",
+        "z": "269b39a3.096916",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.tempc",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 340,
+        "wires": [
+            [
+                "6597cc1f.c671c4"
+            ]
+        ]
+    },
+    {
+        "id": "96f4ba53.770fc8",
+        "type": "comment",
+        "z": "269b39a3.096916",
+        "name": "get temperature from payload",
+        "info": "",
+        "x": 1140,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9f8c29a0.c00e88",
+        "type": "comment",
+        "z": "269b39a3.096916",
+        "name": "Thermometer",
+        "info": "",
+        "x": 1390,
+        "y": 200,
+        "wires": []
+    }
+]
