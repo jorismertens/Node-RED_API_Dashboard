@@ -26,5 +26,5 @@ The last thing we need to do is activating our flow. This is being done by press
 
 Select the debug window on the right side (the little bug icon) to whow the output of your "Debug" node. Now press the inject node to inject a Boolean True statement. If its all done correctly a "true"statement will appear in the debug window on the right side of your screen.
 
-[!](images/1.jpg)
+![](images/1.jpg)
 
