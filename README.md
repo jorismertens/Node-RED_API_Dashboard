@@ -22,7 +22,9 @@ to create a first flow you can use the "Inject"node bly drag and drop this to yo
 
 If you want to see what the output of the node is you can use the "Debug" node by drag and drop this on to your Flow. Now connect the output of the "Inject"node, which is the right side, with the input of the "Debug" node by holding your mouse button. This will generate a wired connection. 
 
-The last thing we need to do is activating our flow. This is being done by pressing the red "deploy" button on the upper right side of the screen. This button will commit any changes and activate your flow. 
+The last thing we need to do is activating our flow. This is being done by pressing the "deploy" button on the upper right side of the screen. This button will commit any changes and activate your flow. The "Deploy" button will color red when it detects a change in your flow.
 
 Select the debug window on the right side (the little bug icon) to whow the output of your "Debug" node. Now press the inject node to inject a Boolean True statement. If its all done correctly a "true"statement will appear in the debug window on the right side of your screen.
+
+[!](images/1.jpg)
 
