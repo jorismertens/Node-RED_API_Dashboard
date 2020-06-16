@@ -1,4 +1,4 @@
-# Node-RED_API_Dashboard
+Node-RED_API_Dashboard
 
 This project is to understand how to use Node-Red as a dashboard and play around with several API's.
 please follow the steps as decribed below.
@@ -27,4 +27,5 @@ The last thing we need to do is activating our flow. This is being done by press
 Select the debug window on the right side (the little bug icon) to whow the output of your "Debug" node. Now press the inject node to inject a Boolean True statement. If its all done correctly a "true"statement will appear in the debug window on the right side of your screen.
 
 ![](images/1.jpg)
+
 
