@@ -29,7 +29,7 @@ Select the debug windowon the right side (the little bug icon) to whow the outpu
 
 ![](/images/1.png)
 
-# - Interact with API's</br>
+# 4- Interact with API's</br>
 Now we are going to use the Openweathermap nodes which we installed in step 2. please find the nodes in your nodelist on the left side and drag and drop it into your flow. connect the "inject"node on the input, and a debug node on the output. It doesnt matter what the inject node will provide. the Openweathermap node will be triggered on any input. </br>
 
 Now doubleclick the Openweathermap node and notice that it requires an API key. This key is needed to have the node intreact with the òpenweathermap server and therefore we need to create one. Go to Openweatermap.org (http://openweatemap.org) and create an account. When done you are able to create an API key in thee user menu. The key will be a string of characters. Copy/paste this string in your Openweathermap node. </br>
