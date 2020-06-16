@@ -1,4 +1,4 @@
-# Node-RED_API_Dashboard
+# Node-Red_API_Dashboard
 
 This project is to understand how to use Node-Red as a dashboard and play around with several API's.
 please follow the steps as decribed below.
